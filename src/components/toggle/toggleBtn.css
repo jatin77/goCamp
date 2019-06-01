@@ -1,0 +1,67 @@
+.toggleBtn {
+  position: fixed;
+  width: 30px;
+  height: 20px;
+  z-index: 1000;
+  right: 0rem;
+  top: 0rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.toggleBtn.show {
+  justify-content: center;
+}
+
+.toggleBtn.show.toggleBtn>div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.toggleBtn.show.toggleBtn>div:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.toggleBtn>div {
+  width: 30px;
+  height: 1px;
+  transition: all .2s ease-out;
+  background: #fff;
+  transform: rotate(0deg);
+}
+
+/* desktop */
+@media (min-width:992px) and (max-width:1200px) {
+  .toggleBtn {
+    margin: 1.8rem 4.5rem 0 4.5rem;
+  }
+}
+
+/* tablet */
+@media (min-width:768px) and (max-width:992px) {
+  .toggleBtn {
+    margin: 1.8rem 2.5rem 0 2.5rem;
+  }
+}
+
+/* mobile */
+@media (min-width:576px) and (max-width:768px) {
+  .toggleBtn {
+    margin: 1.8rem 2rem 0 2rem;
+  }
+}
+
+/* small */
+@media (max-width:576px) {
+  .toggleBtn {
+    margin: 1.8rem 1rem 0 1rem;
+  }
+}
+
+/* wide */
+@media (min-width:1200px) {
+  .toggleBtn {
+    margin: 1.8rem 5rem 0 5rem;
+  }
+}
